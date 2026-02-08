@@ -15,14 +15,14 @@ The protocol works over USB CDC (serial) communication using simple ASCII comman
 
 ## Getting Started
 
-The [Protocol Overview](overview.md) provides comprehensive documentation of:
+The [Protocol Overview](device-api/index.md) provides comprehensive documentation of:
 
 - Command structure and communication flow
 - Data transfer strategies for different device types
 - Complete workflow examples
 - Best practices and troubleshooting
 
-**→ [Read the Protocol Overview](overview.md)**
+**→ [Read the Protocol Overview](device-api/index.md)**
 
 ## Supported Devices
 
