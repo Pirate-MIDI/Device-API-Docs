@@ -93,7 +93,7 @@ Device → ok~
 
 The device will parse this, recognize it's updating footswitch index 2, and merge it with the existing bank configuration while ignoring the empty objects at indices 0 and 1.
 
-### Why Do This?
+### Why This Approach Works
 
 The device's JSON parser can handle **partial configurations** by merging incoming data with existing settings. When you send only a `footswitches` array with sparse entries, the device:
 
@@ -102,7 +102,7 @@ The device's JSON parser can handle **partial configurations** by merging incomi
 3. Ignores empty objects and missing fields
 4. Preserves all other existing bank data
 
-This keeps individual transfer sizes manageable while allowing complex configurations to be sent reliably.
+This strategy keeps individual transfer sizes manageable while allowing complex configurations to be sent reliably.
 
 ## Protocol Structure
 
@@ -260,7 +260,7 @@ ok~
 ok~
 ```
 
-*Note: You can send partial configurations containing only the fields you wish to update. The device will merge these changes with existing settings.*
+*Note: You can send partial configurations containing only the fields you wish to update. However, as noted in the "Complete Workflow Examples" section below, this is not recommended. Best practice is to retrieve the current settings via DREQ, modify the fields you need to change, and send the complete configuration back.*
 
 #### Transferring Bank Settings
 
@@ -413,7 +413,7 @@ This ensures reliable, predictable behavior across all device models and firmwar
 
 ```
 Host → CHCK~
-Device → {"deviceModel":"Scribble","firmwareVersion":"1.0.0",...}~
+Device → {"deviceModel":"Bridge6","firmwareVersion":"2.1.0","hardwareVersion":"1.1.3","deviceName":"Bridge 6","uId":5,"profileId":0}~
 ```
 
 ### Example 2: Read Global Settings
@@ -422,7 +422,7 @@ Device → {"deviceModel":"Scribble","firmwareVersion":"1.0.0",...}~
 Host → DREQ~
 Device → ok~
 Host → globalSettings~
-Device → {"deviceName":"Scribble","currentBank":0,"midiChannel":1,...}~
+Device → {"currentBank":0,"midiChannel":0,"ledBrightness":66,"uiMode":"extended","holdTime":1000,"deviceName":"Bridge 6","profileId":0,...}~
 ```
 
 ### Example 3: Read Bank 5 Settings
@@ -431,7 +431,7 @@ Device → {"deviceName":"Scribble","currentBank":0,"midiChannel":1,...}~
 Host → DREQ~
 Device → ok~
 Host → bankSettings,5~
-Device → {"bankId":5,"bankName":"Lead Sound","bpm":120,...}~
+Device → {"bankName":"New Bank","bankId":1820074671,"midiClocks":[{"tempo":0},{"tempo":0}],"bankMessages":{"numMessages":0,"messages":[]},...}~
 ```
 
 ### Example 4: Update Global Settings
@@ -591,7 +591,7 @@ Device-specific schemas are documented in their respective sections.
 
 For detailed information about specific devices, including complete JSON schemas and configuration options, see:
 
-- [Scribble](devices/scribble.md)
+- todo
 - (Additional devices will be listed here)
 
 ## Troubleshooting
