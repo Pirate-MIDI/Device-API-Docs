@@ -1,0 +1,78 @@
+/* ============================= */
+/* Pirate MIDI gradient headers  */
+/* ============================= */
+
+/* LIGHT THEME — blue gradient @ 45deg */
+:root {
+  /* Header & top tabs gradient */
+  --pm-header-gradient: linear-gradient(45deg, #5b8dca 0%, #85d1d4 100%);
+  /* Ensure header text/icons are readable on the gradient */
+  --pm-header-fg: #ffffff;
+}
+
+/* DARK THEME — pink gradient @ 45deg */
+[data-md-color-scheme="slate"] {
+  --pm-header-gradient: linear-gradient(45deg, #ef5280 0%, #f15a5b 100%);
+  --pm-header-fg: #ffffff;
+}
+
+/* Apply the gradient */
+.md-header,
+.md-tabs {
+  background: var(--pm-header-gradient) !important;
+  color: var(--pm-header-fg);
+}
+
+/* Make sure header icons/text inherit the contrast color */
+.md-header .md-header__button,
+.md-header .md-header__button .md-icon,
+.md-header .md-header__title,
+.md-header .md-search__input,
+.md-header .md-search__icon,
+.md-tabs__link,
+.md-tabs__item .md-icon {
+  color: var(--pm-header-fg);
+  fill: var(--pm-header-fg);
+}
+
+/* Keep the default sticky header shadow (optional polish) */
+.md-header {
+  box-shadow: var(--md-shadow-z2);
+}
+
+/* Optional: hover state tweaks for tabs on gradients */
+.md-tabs__link:hover,
+.md-tabs__link--active {
+  opacity: 0.9;
+}
+
+/* Increase logo size in header */
+.md-header__button.md-logo img {
+  max-height: 2.5rem; /* default is ~1.8rem */
+}
+
+/* Optional: slightly increase padding so it stays centered */
+.md-header__button.md-logo {
+  padding: 0.25rem 0.5rem;
+
+  
+}
+
+/* Kill the divider/shadow between header rows */
+.md-header,
+.md-header__inner,
+.md-tabs {
+  box-shadow: none !important;
+}
+
+.md-tabs {
+  border-top: 0 !important;   /* some versions use a border instead */
+}
+
+.grid.cards.onecol {
+  grid-template-columns: 1fr !important;
+}
+
+.imageheight-300 {
+  max-height: 300px;
+}

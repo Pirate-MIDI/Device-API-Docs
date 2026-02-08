@@ -1,0 +1,117 @@
+/* Page size & margins */
+@page {
+  size: A4;                 /* or 'Letter' */
+  margin: 18mm 15mm;        /* top/bottom, left/right */
+}
+
+/* First page: avoid accidental blank/huge margin */
+@page :first {
+  margin-top: 0;
+}
+
+@media print {
+  /* Remove card-like shadows/borders that confuse layout engines */
+  * {
+    box-shadow: none !important;
+  }
+
+  /* Let content expand to full page width for PDF */
+  .md-grid,
+  .md-main,
+  .md-main__inner,
+  .md-content,
+  .md-content__inner {
+    max-width: none !important;
+    width: auto !important;
+  }
+
+  /* Typography for print */
+  .md-typeset {
+    font-size: 10.5pt;
+    line-height: 1.45;
+  }
+
+  /* Images & SVG scale to page width */
+  img, svg {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Tables don’t overflow */
+  .md-typeset table {
+    width: 100% !important;
+    table-layout: fixed;         /* helps long words/URLs wrap */
+    word-wrap: break-word;
+  }
+
+  /* Code blocks wrap instead of running off the page */
+  .md-typeset pre > code {
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+  }
+
+  /* Avoid awkward breaks */
+  h1, h2 { break-after: avoid-page; }
+  h2, h3, .codehilite, .highlight, table { break-inside: avoid; }
+
+  /* Kill link “¶” permalinks and similar print-only noise, if any */
+  a[href^="#"]::after { content: ""; }
+
+  /* --- Material grid & cards: make them print-friendly --- */
+  .md-typeset .grid,
+  .md-typeset .grid.cards {
+    display: block !important;                 /* collapse CSS grid to a stack for print */
+    grid-template-columns: none !important;
+  }
+  .md-typeset .grid > *,
+  .md-typeset .grid.cards > * {
+    break-inside: avoid;                       /* avoid splitting cards across pages */
+    page-break-inside: avoid;                  /* older UAs */
+    margin-bottom: 6mm;                        /* breathing room between items */
+  }
+  .md-typeset .grid .card,
+  .md-typeset .grid.cards .card {
+    display: block !important;
+    border: 0.3mm solid #e0e0e0;
+    box-shadow: none !important;
+    padding: 4mm;
+  }
+
+  /* --- Admonitions: readable, compact, don’t overflow --- */
+  .md-typeset .admonition,
+  .md-typeset details {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    border: 0.4mm solid #d0d0d0;
+    background: none !important;
+    box-shadow: none !important;
+    padding: 4mm 5mm;
+  }
+  .md-typeset .admonition > .admonition-title,
+  .md-typeset details > summary {
+    font-weight: 700;
+    margin-bottom: 2mm;
+  }
+
+  /* --- Wrapping: stop content running off the right edge --- */
+  .md-typeset, .md-typeset p, .md-typeset li, .md-typeset code, .md-typeset a {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  .md-typeset pre,
+  .md-typeset pre > code {
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    overflow: visible !important;
+  }
+
+  /* --- Tabs/blocks shouldn’t split awkwardly --- */
+  .md-typeset .tabbed-set,
+  .md-typeset .highlight,
+  .md-typeset .codehilite,
+  .md-typeset table,
+  .md-typeset figure {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}

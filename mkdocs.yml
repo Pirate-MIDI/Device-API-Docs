@@ -1,0 +1,71 @@
+site_name: Pirate MIDI Device API Documentation
+site_description: Official documentation for the Device API protocol for interacting with Pirate MIDI hardware
+site_url: https://developer.piratemidi.com
+repo_url: https://github.com/Pirate-MIDI/Device-API-Docs
+edit_uri: edit/main/docs/
+repo_name: Device-API-Docs (GitHub)
+
+theme:
+  language: en
+  favicon: assets/favicon.png
+  logo: assets/logo-white.png
+  name: material
+  features:
+    - content.action.edit
+    - header.autohide
+    - navigation.tabs
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.path
+    - navigation.footer
+    - content.code.copy
+    - content.tooltips
+    - search.suggest
+    - search.highlight
+    - search.share
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: cyan
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: Inter
+    code: Google Sans Code
+
+plugins:
+  - search
+  - social:
+      cards_layout_options:
+        background_color: "#5b8dca"   # your brand blue
+        color: "#ffffff"              # text on the card
+        font_family: "Inter"
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+
+
+extra_css:
+  - assets/branding.css
+  - assets/print.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/x722K7ksA6
+    - icon: fontawesome/brands/youtube
+      link: https://youtube.com/c/piratemidi
+    - icon: fontawesome/brands/facebook
+      link: https://facebook.com/groups/pirate.midi.users
+    - icon: fontawesome/brands/instagram
+      link: https://instagram.com/piratemidi
