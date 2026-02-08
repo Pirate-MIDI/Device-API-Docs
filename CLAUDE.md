@@ -33,15 +33,30 @@ mkdocs build --strict
 mkdocs gh-deploy --force
 ```
 
-## Python Environment
+## Python Environment Setup
 
-The project requires Python 3.11+ and the following key dependencies:
+The project requires Python 3.11+ and dependencies are managed via [requirements.txt](requirements.txt).
+
+### Initial Setup
+```bash
+# Create virtual environment
+python3 -m venv venv
+
+# Activate virtual environment
+source venv/bin/activate  # On macOS/Linux
+# or
+venv\Scripts\activate  # On Windows
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+### Key Dependencies
 - `mkdocs` - Core documentation generator
-- `mkdocs-material` - Material theme
-- `mkdocs-material[imaging]` - Social card generation
+- `mkdocs-material[imaging]` - Material theme with social card generation
 - `mkdocs-git-revision-date-localized-plugin` - Automatic revision dates
 
-A virtual environment exists at `venv/` for local development.
+**Note:** The `mkdocs-material[imaging]` extra requires system libraries (Pillow, CairoSVG) which are automatically handled on macOS/Windows but may need manual installation on Linux. CI uses Ubuntu and installs these in the workflow.
 
 ## Architecture & Structure
 

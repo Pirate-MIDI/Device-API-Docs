@@ -1,0 +1,38 @@
+# Python virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# Python artifacts
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# MkDocs build output
+site/
+
+# MkDocs cache
+.cache/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment variables
+.env
+.env.local

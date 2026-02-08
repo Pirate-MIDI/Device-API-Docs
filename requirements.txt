@@ -1,0 +1,8 @@
+# MkDocs core
+mkdocs>=1.5.0
+
+# Material theme with imaging and extras support
+mkdocs-material[imaging]
+
+# Plugins
+mkdocs-git-revision-date-localized-plugin>=1.2.0
