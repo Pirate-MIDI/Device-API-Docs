@@ -93,7 +93,7 @@ Device → ok~
 
 The device will parse this, recognize it's updating footswitch index 2, and merge it with the existing bank configuration while ignoring the empty objects at indices 0 and 1.
 
-### Why This Approach Works
+### Why Do This?
 
 The device's JSON parser can handle **partial configurations** by merging incoming data with existing settings. When you send only a `footswitches` array with sparse entries, the device:
 
