@@ -8,4 +8,48 @@
          <loc>https://developer.piratemidi.com/device-api/</loc>
          <lastmod>2026-02-10</lastmod>
     </url>
+    <url>
+         <loc>https://developer.piratemidi.com/devices/</loc>
+         <lastmod>2026-02-10</lastmod>
+    </url>
+    <url>
+         <loc>https://developer.piratemidi.com/devices/bridge/aero/</loc>
+         <lastmod>2026-02-10</lastmod>
+    </url>
+    <url>
+         <loc>https://developer.piratemidi.com/devices/bridge/aero/x.x.x/</loc>
+         <lastmod>2026-02-10</lastmod>
+    </url>
+    <url>
+         <loc>https://developer.piratemidi.com/devices/bridge/bridge4/</loc>
+         <lastmod>2026-02-10</lastmod>
+    </url>
+    <url>
+         <loc>https://developer.piratemidi.com/devices/bridge/bridge4/x.x.x/</loc>
+         <lastmod>2026-02-10</lastmod>
+    </url>
+    <url>
+         <loc>https://developer.piratemidi.com/devices/bridge/bridge6/</loc>
+         <lastmod>2026-02-10</lastmod>
+    </url>
+    <url>
+         <loc>https://developer.piratemidi.com/devices/bridge/bridge6/x.x.x/</loc>
+         <lastmod>2026-02-10</lastmod>
+    </url>
+    <url>
+         <loc>https://developer.piratemidi.com/devices/click/click/</loc>
+         <lastmod>2026-02-10</lastmod>
+    </url>
+    <url>
+         <loc>https://developer.piratemidi.com/devices/click/click/x.x.x/</loc>
+         <lastmod>2026-02-10</lastmod>
+    </url>
+    <url>
+         <loc>https://developer.piratemidi.com/devices/scribble/scribble/</loc>
+         <lastmod>2026-02-10</lastmod>
+    </url>
+    <url>
+         <loc>https://developer.piratemidi.com/devices/scribble/scribble/x.x.x/</loc>
+         <lastmod>2026-02-10</lastmod>
+    </url>
 </urlset>
