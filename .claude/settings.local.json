@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(del \"c:\\\\Users\\\\Sam\\\\Documents\\\\Github\\\\PirateMIDI\\\\Device-API-Docs\\\\docs\\\\devices\\\\bridge\\\\aero\\\\index.md\")",
+      "Bash(del \"c:\\\\Users\\\\Sam\\\\Documents\\\\Github\\\\PirateMIDI\\\\Device-API-Docs\\\\docs\\\\devices\\\\bridge\\\\bridge4\\\\index.md\")",
+      "Bash(del \"c:\\\\Users\\\\Sam\\\\Documents\\\\Github\\\\PirateMIDI\\\\Device-API-Docs\\\\docs\\\\devices\\\\bridge\\\\bridge6\\\\index.md\")",
+      "Bash(del \"c:\\\\Users\\\\Sam\\\\Documents\\\\Github\\\\PirateMIDI\\\\Device-API-Docs\\\\docs\\\\devices\\\\click\\\\click\\\\index.md\")",
+      "Bash(del \"c:\\\\Users\\\\Sam\\\\Documents\\\\Github\\\\PirateMIDI\\\\Device-API-Docs\\\\docs\\\\devices\\\\scribble\\\\scribble\\\\index.md\")",
+      "Bash(for d in bridge/aero bridge/bridge4 bridge/bridge6 click/click scribble/scribble)",
+      "Bash(do for v in x.x.x 1.0.x 1.1.x 1.2.x)",
+      "Bash(do rm -f \"c:/Users/Sam/Documents/Github/PirateMIDI/Device-API-Docs/docs/devices/$d/templates/$v/globalSettings.json\" \"c:/Users/Sam/Documents/Github/PirateMIDI/Device-API-Docs/docs/devices/$d/templates/$v/bankSettings.json\")",
+      "Bash(done)"
+    ]
+  }
+}

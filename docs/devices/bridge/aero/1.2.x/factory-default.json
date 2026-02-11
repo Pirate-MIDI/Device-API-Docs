@@ -1,0 +1,72 @@
+{
+  "globalSettings": {
+    "deviceName": "Aero",
+    "midiChannel": 1,
+    "usbMidiEnabled": true,
+    "bleMidiEnabled": true,
+    "brightness": 100,
+    "sleepTimeout": 300,
+    "bankCount": 8,
+    "midiThrough": true,
+    "expressionPedals": 2,
+    "auxSwitchEnabled": true,
+    "firmwareVersion": "1.2.0"
+  },
+  "bankSettings": [
+    {
+      "bankName": "Bank 1",
+      "bankColor": "#5b8dca",
+      "footswitches": [
+        {
+          "name": "FS1",
+          "mode": "toggle",
+          "actions": {
+            "press": [
+              {
+                "type": "controlChange",
+                "channel": 1,
+                "cc": 80,
+                "value": 127
+              }
+            ],
+            "release": [],
+            "longPress": []
+          }
+        },
+        {
+          "name": "FS2",
+          "mode": "momentary",
+          "actions": {
+            "press": [
+              {
+                "type": "controlChange",
+                "channel": 1,
+                "cc": 81,
+                "value": 127
+              }
+            ],
+            "release": [
+              {
+                "type": "controlChange",
+                "channel": 1,
+                "cc": 81,
+                "value": 0
+              }
+            ],
+            "longPress": []
+          }
+        }
+      ],
+      "expressionPedals": [
+        {
+          "name": "EXP1",
+          "cc": 1,
+          "channel": 1,
+          "min": 0,
+          "max": 127,
+          "curve": "linear"
+        }
+      ]
+    }
+  ]
+}

@@ -46,6 +46,7 @@ theme:
 
 plugins:
   - search
+  - awesome-pages
   - social:
       cards_layout_options:
         background_color: "#5b8dca"   # your brand blue
@@ -55,6 +56,12 @@ plugins:
       enable_creation_date: true
       type: timeago
 
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
 
 extra_css:
   - assets/branding.css
