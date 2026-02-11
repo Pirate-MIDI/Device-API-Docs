@@ -69,6 +69,79 @@
   border-top: 0 !important;   /* some versions use a border instead */
 }
 
+/* ============================= */
+/* JSON Tree Viewer (renderjson) */
+/* ============================= */
+
+.json-viewer {
+  position: relative;
+}
+
+.json-viewer pre.renderjson {
+  font-family: "Google Sans Code", "Roboto Mono", monospace;
+  font-size: 13.6px;
+  line-height: 1.6;
+  padding: 1em 1.2em;
+  border-radius: .2rem;
+  overflow-x: auto;
+  background: var(--md-code-bg-color);
+  color: var(--md-code-fg-color);
+  white-space: pre;
+}
+
+/* Disclosure toggle arrows */
+.renderjson a.disclosure {
+  color: var(--md-accent-fg-color);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: .75em;
+  padding-right: .3em;
+  user-select: none;
+}
+.renderjson a.disclosure:hover {
+  opacity: .7;
+}
+
+/* Collapsed placeholder text */
+.renderjson a:not(.disclosure) {
+  color: var(--md-default-fg-color--light);
+  text-decoration: none;
+  cursor: pointer;
+  font-style: italic;
+}
+
+/* JSON syntax colours — uses Material's code highlight variables */
+.renderjson .key       { color: var(--md-code-hl-name-color); }
+.renderjson .string    { color: var(--md-code-hl-string-color); }
+.renderjson .number    { color: var(--md-code-hl-number-color); }
+.renderjson .boolean   { color: var(--md-code-hl-constant-color); }
+.renderjson .keyword   { color: var(--md-code-hl-keyword-color); font-style: italic; }
+.renderjson .syntax    { color: var(--md-code-fg-color); opacity: .6; }
+
+/* Copy button */
+.json-viewer-copy {
+  position: absolute;
+  top: .5em;
+  right: .5em;
+  z-index: 1;
+  background: var(--md-code-bg-color);
+  color: var(--md-default-fg-color--light);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: .2rem;
+  padding: .3em .4em;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity .2s;
+  line-height: 1;
+}
+.json-viewer:hover .json-viewer-copy {
+  opacity: 1;
+}
+.json-viewer-copy:hover {
+  color: var(--md-accent-fg-color);
+  border-color: var(--md-accent-fg-color);
+}
+
 .grid.cards.onecol {
   grid-template-columns: 1fr !important;
 }

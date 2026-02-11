@@ -1891,30 +1891,30 @@
 <h4 id="recommended-transfer-strategy-for-bridge-os-devices">Recommended Transfer Strategy for Bridge OS Devices</h4>
 <p><strong>Step 1: Send Non-Footswitch Settings</strong></p>
 <p>First, send all bank-level settings excluding the footswitches array:</p>
-<pre><code>Host → DTXR~
+<div class="highlight"><pre><span></span><code>Host → DTXR~
 Device → ok~
 Host → bankSettings,0~
 Device → ok~
 Host → {&quot;bankId&quot;:1820074671,&quot;bankName&quot;:&quot;Lead Patch&quot;,&quot;midiClocks&quot;:[...],&quot;bankMessages&quot;:{...},...}~
 Device → ok~
-</code></pre>
+</code></pre></div>
 <p><strong>Step 2: Send Each Footswitch Individually</strong></p>
 <p>Send each footswitch as a separate transfer, in numerical order (footswitch 0, then 1, then 2, etc.):</p>
-<pre><code>Host → DTXR~
+<div class="highlight"><pre><span></span><code>Host → DTXR~
 Device → ok~
 Host → bankSettings,0~
 Device → ok~
 Host → {&quot;footswitches&quot;:[{&quot;name&quot;:&quot;FS 1&quot;,&quot;primaryMode&quot;:&quot;toggle&quot;,...}]}~
 Device → ok~
-</code></pre>
+</code></pre></div>
 <p>Then for footswitch 1:</p>
-<pre><code>Host → DTXR~
+<div class="highlight"><pre><span></span><code>Host → DTXR~
 Device → ok~
 Host → bankSettings,0~
 Device → ok~
 Host → {&quot;footswitches&quot;:[{},{&quot;name&quot;:&quot;FS 2&quot;,&quot;primaryMode&quot;:&quot;press&quot;,...}]}~
 Device → ok~
-</code></pre>
+</code></pre></div>
 <p><strong>Important Rules:</strong></p>
 <ol>
 <li><strong>Send footswitches in numerical order</strong> (0, 1, 2, 3, etc.)</li>
@@ -1923,24 +1923,24 @@ Device → ok~
 <li><strong>Each footswitch is a complete transfer</strong>: Each footswitch should contain all its configuration (modes, colors, message stacks, etc.)</li>
 </ol>
 <h4 id="example-sending-footswitch-2-on-a-bridge6">Example: Sending Footswitch 2 on a Bridge6</h4>
-<pre><code class="language-json">{
-  &quot;footswitches&quot;: [
-    {},
-    {},
-    {
-      &quot;name&quot;: &quot;FS 3&quot;,
-      &quot;primaryMode&quot;: &quot;toggle&quot;,
-      &quot;primaryColor&quot;: 16711680,
-      &quot;toggleOnMessages&quot;: {
-        &quot;numMessages&quot;: 1,
-        &quot;messages&quot;: [...]
-      },
-      &quot;toggleOffMessages&quot;: {...},
-      &quot;pressMessages&quot;: {...}
-    }
-  ]
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;footswitches&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{},</span>
+<span class="w">    </span><span class="p">{},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FS 3&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;primaryMode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;toggle&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;primaryColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">16711680</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;toggleOnMessages&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;numMessages&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;messages&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;toggleOffMessages&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;pressMessages&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>The device will parse this, recognize it's updating footswitch index 2, and merge it with the existing bank configuration while ignoring the empty objects at indices 0 and 1.</p>
 <h3 id="why-do-this">Why Do This?</h3>
 <p>The device's JSON parser can handle <strong>partial configurations</strong> by merging incoming data with existing settings. When you send only a <code>footswitches</code> array with sparse entries, the device:</p>
@@ -1955,8 +1955,8 @@ Device → ok~
 <p>All communication follows a consistent structure designed for efficient, reliable data exchange.</p>
 <h3 id="command-format">Command Format</h3>
 <p>Each command is sent as a separate packet:</p>
-<pre><code>[COMMAND]~
-</code></pre>
+<div class="highlight"><pre><span></span><code>[COMMAND]~
+</code></pre></div>
 <ul>
 <li><strong>Command</strong>: 4 uppercase letters identifying the operation</li>
 <li><strong>Terminator</strong>: <code>~</code> character signifying end of transmission</li>
@@ -2012,12 +2012,12 @@ Device → ok~
 <h2 id="communication-flow">Communication Flow</h2>
 <h3 id="1-device-information-query-chck">1. Device Information Query (CHCK)</h3>
 <p>The CHCK command queries basic device information.</p>
-<p><strong>Host sends:</strong></p>
-<pre><code>CHCK~
-</code></pre>
-<p><strong>Device responds with JSON data:</strong></p>
-<pre><code class="language-json">{&quot;deviceModel&quot;:&quot;Bridge6&quot;,&quot;firmwareVersion&quot;:&quot;2.1.0&quot;,&quot;hardwareVersion&quot;:&quot;1.1.3&quot;,&quot;deviceName&quot;:&quot;Bridge 6&quot;,&quot;uId&quot;:5,&quot;profileId&quot;:0}~
-</code></pre>
+<p><strong>Host sends:</strong>
+<div class="highlight"><pre><span></span><code>CHCK~
+</code></pre></div></p>
+<p><strong>Device responds with JSON data:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;deviceModel&quot;</span><span class="p">:</span><span class="s2">&quot;Bridge6&quot;</span><span class="p">,</span><span class="nt">&quot;firmwareVersion&quot;</span><span class="p">:</span><span class="s2">&quot;2.1.0&quot;</span><span class="p">,</span><span class="nt">&quot;hardwareVersion&quot;</span><span class="p">:</span><span class="s2">&quot;1.1.3&quot;</span><span class="p">,</span><span class="nt">&quot;deviceName&quot;</span><span class="p">:</span><span class="s2">&quot;Bridge 6&quot;</span><span class="p">,</span><span class="nt">&quot;uId&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="nt">&quot;profileId&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">}</span><span class="err">~</span>
+</code></pre></div></p>
 <p><em>Note: This example shows data from a Bridge6 device. All devices return similar fields, though some field names or additional fields may vary by device model.</em></p>
 <h3 id="2-requesting-data-dreq">2. Requesting Data (DREQ)</h3>
 <p>The DREQ command requests configuration data from the device. This is a <strong>multi-step process</strong> where each packet is sent separately.</p>
@@ -2027,110 +2027,110 @@ Device → ok~
 <li><code>bankSettings</code> - Preset/bank configuration (requires bank index parameter)</li>
 </ul>
 <h4 id="requesting-global-settings">Requesting Global Settings</h4>
-<p><strong>Step 1 - Host sends command:</strong></p>
-<pre><code>DREQ~
-</code></pre>
-<p><strong>Step 1 - Device responds:</strong></p>
-<pre><code>ok~
-</code></pre>
-<p><strong>Step 2 - Host sends data type:</strong></p>
-<pre><code>globalSettings~
-</code></pre>
-<p><strong>Step 2 - Device responds with configuration data:</strong></p>
-<pre><code class="language-json">{&quot;currentBank&quot;:0,&quot;midiChannel&quot;:0,&quot;ledBrightness&quot;:66,&quot;uiMode&quot;:&quot;extended&quot;,&quot;holdTime&quot;:1000,&quot;deviceName&quot;:&quot;Bridge 6&quot;,&quot;profileId&quot;:0,...}~
-</code></pre>
+<p><strong>Step 1 - Host sends command:</strong>
+<div class="highlight"><pre><span></span><code>DREQ~
+</code></pre></div></p>
+<p><strong>Step 1 - Device responds:</strong>
+<div class="highlight"><pre><span></span><code>ok~
+</code></pre></div></p>
+<p><strong>Step 2 - Host sends data type:</strong>
+<div class="highlight"><pre><span></span><code>globalSettings~
+</code></pre></div></p>
+<p><strong>Step 2 - Device responds with configuration data:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;currentBank&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;midiChannel&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;ledBrightness&quot;</span><span class="p">:</span><span class="mi">66</span><span class="p">,</span><span class="nt">&quot;uiMode&quot;</span><span class="p">:</span><span class="s2">&quot;extended&quot;</span><span class="p">,</span><span class="nt">&quot;holdTime&quot;</span><span class="p">:</span><span class="mi">1000</span><span class="p">,</span><span class="nt">&quot;deviceName&quot;</span><span class="p">:</span><span class="s2">&quot;Bridge 6&quot;</span><span class="p">,</span><span class="nt">&quot;profileId&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="err">...</span><span class="p">}</span><span class="err">~</span>
+</code></pre></div></p>
 <p><em>Note: This example shows abbreviated data from a Bridge6 device. Actual responses contain many more fields depending on device capabilities. The structure and field names vary by device model.</em></p>
 <h4 id="requesting-bank-settings">Requesting Bank Settings</h4>
-<p><strong>Step 1 - Host sends command:</strong></p>
-<pre><code>DREQ~
-</code></pre>
-<p><strong>Step 1 - Device responds:</strong></p>
-<pre><code>ok~
-</code></pre>
-<p><strong>Step 2 - Host sends data type with bank index:</strong></p>
-<pre><code>bankSettings,0~
-</code></pre>
-<p>(Where <code>0</code> is the zero-indexed bank number: 0-127)</p>
-<p><strong>Step 2 - Device responds with bank configuration data:</strong></p>
-<pre><code class="language-json">{&quot;bankName&quot;:&quot;New Bank&quot;,&quot;bankId&quot;:1820074671,&quot;midiClocks&quot;:[{&quot;tempo&quot;:0},{&quot;tempo&quot;:0}],&quot;bankMessages&quot;:{&quot;numMessages&quot;:0,&quot;messages&quot;:[]},...}~
-</code></pre>
+<p><strong>Step 1 - Host sends command:</strong>
+<div class="highlight"><pre><span></span><code>DREQ~
+</code></pre></div></p>
+<p><strong>Step 1 - Device responds:</strong>
+<div class="highlight"><pre><span></span><code>ok~
+</code></pre></div></p>
+<p><strong>Step 2 - Host sends data type with bank index:</strong>
+<div class="highlight"><pre><span></span><code>bankSettings,0~
+</code></pre></div>
+(Where <code>0</code> is the zero-indexed bank number: 0-127)</p>
+<p><strong>Step 2 - Device responds with bank configuration data:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;bankName&quot;</span><span class="p">:</span><span class="s2">&quot;New Bank&quot;</span><span class="p">,</span><span class="nt">&quot;bankId&quot;</span><span class="p">:</span><span class="mi">1820074671</span><span class="p">,</span><span class="nt">&quot;midiClocks&quot;</span><span class="p">:[{</span><span class="nt">&quot;tempo&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">},{</span><span class="nt">&quot;tempo&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">}],</span><span class="nt">&quot;bankMessages&quot;</span><span class="p">:{</span><span class="nt">&quot;numMessages&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;messages&quot;</span><span class="p">:[]},</span><span class="err">...</span><span class="p">}</span><span class="err">~</span>
+</code></pre></div></p>
 <p><em>Note: This example shows abbreviated data from a Bridge6 device. Actual bank responses contain significantly more data including footswitch configurations, message stacks, and device-specific features. The structure varies by device model.</em></p>
 <h3 id="3-transferring-data-dtxr">3. Transferring Data (DTXR)</h3>
 <p>The DTXR command sends configuration data to the device. This is a <strong>multi-step process</strong> where each packet is sent separately.</p>
 <h4 id="transferring-global-settings">Transferring Global Settings</h4>
-<p><strong>Step 1 - Host sends command:</strong></p>
-<pre><code>DTXR~
-</code></pre>
-<p><strong>Step 1 - Device responds:</strong></p>
-<pre><code>ok~
-</code></pre>
-<p><strong>Step 2 - Host sends data type:</strong></p>
-<pre><code>globalSettings~
-</code></pre>
-<p><strong>Step 2 - Device responds:</strong></p>
-<pre><code>ok~
-</code></pre>
-<p><strong>Step 3 - Host sends JSON configuration:</strong></p>
-<pre><code class="language-json">{&quot;deviceName&quot;:&quot;My Bridge&quot;,&quot;midiChannel&quot;:5}~
-</code></pre>
-<p><strong>Step 3 - Device responds:</strong></p>
-<pre><code>ok~
-</code></pre>
+<p><strong>Step 1 - Host sends command:</strong>
+<div class="highlight"><pre><span></span><code>DTXR~
+</code></pre></div></p>
+<p><strong>Step 1 - Device responds:</strong>
+<div class="highlight"><pre><span></span><code>ok~
+</code></pre></div></p>
+<p><strong>Step 2 - Host sends data type:</strong>
+<div class="highlight"><pre><span></span><code>globalSettings~
+</code></pre></div></p>
+<p><strong>Step 2 - Device responds:</strong>
+<div class="highlight"><pre><span></span><code>ok~
+</code></pre></div></p>
+<p><strong>Step 3 - Host sends JSON configuration:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;deviceName&quot;</span><span class="p">:</span><span class="s2">&quot;My Bridge&quot;</span><span class="p">,</span><span class="nt">&quot;midiChannel&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">}</span><span class="err">~</span>
+</code></pre></div></p>
+<p><strong>Step 3 - Device responds:</strong>
+<div class="highlight"><pre><span></span><code>ok~
+</code></pre></div></p>
 <p><em>Note: You can send partial configurations containing only the fields you wish to update. However, as noted in the "Complete Workflow Examples" section below, this is not recommended. Best practice is to retrieve the current settings via DREQ, modify the fields you need to change, and send the complete configuration back.</em></p>
 <h4 id="transferring-bank-settings">Transferring Bank Settings</h4>
-<p><strong>Step 1 - Host sends command:</strong></p>
-<pre><code>DTXR~
-</code></pre>
-<p><strong>Step 1 - Device responds:</strong></p>
-<pre><code>ok~
-</code></pre>
-<p><strong>Step 2 - Host sends data type with bank index:</strong></p>
-<pre><code>bankSettings,0~
-</code></pre>
-<p>(Where <code>0</code> is the zero-indexed bank number: 0-127)</p>
-<p><strong>Step 2 - Device responds:</strong></p>
-<pre><code>ok~
-</code></pre>
-<p><strong>Step 3 - Host sends JSON configuration:</strong></p>
-<pre><code class="language-json">{&quot;bankId&quot;:1820074671,&quot;bankName&quot;:&quot;Lead Patch&quot;}~
-</code></pre>
-<p><strong>Step 3 - Device responds:</strong></p>
-<pre><code>ok~
-</code></pre>
+<p><strong>Step 1 - Host sends command:</strong>
+<div class="highlight"><pre><span></span><code>DTXR~
+</code></pre></div></p>
+<p><strong>Step 1 - Device responds:</strong>
+<div class="highlight"><pre><span></span><code>ok~
+</code></pre></div></p>
+<p><strong>Step 2 - Host sends data type with bank index:</strong>
+<div class="highlight"><pre><span></span><code>bankSettings,0~
+</code></pre></div>
+(Where <code>0</code> is the zero-indexed bank number: 0-127)</p>
+<p><strong>Step 2 - Device responds:</strong>
+<div class="highlight"><pre><span></span><code>ok~
+</code></pre></div></p>
+<p><strong>Step 3 - Host sends JSON configuration:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;bankId&quot;</span><span class="p">:</span><span class="mi">1820074671</span><span class="p">,</span><span class="nt">&quot;bankName&quot;</span><span class="p">:</span><span class="s2">&quot;Lead Patch&quot;</span><span class="p">}</span><span class="err">~</span>
+</code></pre></div></p>
+<p><strong>Step 3 - Device responds:</strong>
+<div class="highlight"><pre><span></span><code>ok~
+</code></pre></div></p>
 <p><em>Note: More complex devices such as Bridge OS controllers (Bridge4, Bridge6, Bridge8, etc.) automatically save bank data when received via DTXR. For these devices, the <code>savePresets</code> CTRL command may not be available or necessary. Simpler devices like the Scribble require explicit saving using <code>savePresets</code>. Check device-specific documentation for save behavior.</em></p>
 <h3 id="4-control-commands-ctrl">4. Control Commands (CTRL)</h3>
 <p>The CTRL command executes device functions. This is a <strong>two-step process</strong>.</p>
-<p><strong>Step 1 - Host sends command:</strong></p>
-<pre><code>CTRL~
-</code></pre>
-<p><strong>Step 1 - Device responds:</strong></p>
-<pre><code>ok~
-</code></pre>
-<p><strong>Step 2 - Host sends JSON payload:</strong></p>
-<pre><code class="language-json">{&quot;command&quot;:[&quot;restart&quot;]}~
-</code></pre>
-<p><strong>Step 2 - Device responds:</strong></p>
-<pre><code>ok~
-</code></pre>
+<p><strong>Step 1 - Host sends command:</strong>
+<div class="highlight"><pre><span></span><code>CTRL~
+</code></pre></div></p>
+<p><strong>Step 1 - Device responds:</strong>
+<div class="highlight"><pre><span></span><code>ok~
+</code></pre></div></p>
+<p><strong>Step 2 - Host sends JSON payload:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;command&quot;</span><span class="p">:[</span><span class="s2">&quot;restart&quot;</span><span class="p">]}</span><span class="err">~</span>
+</code></pre></div></p>
+<p><strong>Step 2 - Device responds:</strong>
+<div class="highlight"><pre><span></span><code>ok~
+</code></pre></div></p>
 <h4 id="control-command-examples">Control Command Examples</h4>
-<p><strong>Single command:</strong></p>
-<pre><code>Host → CTRL~
+<p><strong>Single command:</strong>
+<div class="highlight"><pre><span></span><code>Host → CTRL~
 Device → ok~
 Host → {&quot;command&quot;:[&quot;bankUp&quot;]}~
 Device → ok~
-</code></pre>
-<p><strong>Multiple commands (executed in order):</strong></p>
-<pre><code>Host → CTRL~
+</code></pre></div></p>
+<p><strong>Multiple commands (executed in order):</strong>
+<div class="highlight"><pre><span></span><code>Host → CTRL~
 Device → ok~
 Host → {&quot;command&quot;:[&quot;bankUp&quot;,&quot;savePresets&quot;]}~
 Device → ok~
-</code></pre>
-<p><strong>Command with parameter:</strong></p>
-<pre><code>Host → CTRL~
+</code></pre></div></p>
+<p><strong>Command with parameter:</strong>
+<div class="highlight"><pre><span></span><code>Host → CTRL~
 Device → ok~
 Host → {&quot;command&quot;:[{&quot;goToBank&quot;:5}]}~
 Device → ok~
-</code></pre>
+</code></pre></div></p>
 <h2 id="banks-vs-presets-terminology">Banks vs. Presets Terminology</h2>
 <p>The terms "bank" and "preset" are often used interchangeably in MIDI terminology, both referring to stored configurations that can be recalled via MIDI Program Change messages.</p>
 <p><strong>Important terminology notes:</strong></p>
@@ -2181,77 +2181,77 @@ Device → ok~
 <p>This ensures reliable, predictable behavior across all device models and firmware versions.</p>
 <hr />
 <h3 id="example-1-query-device-information">Example 1: Query Device Information</h3>
-<pre><code>Host → CHCK~
+<div class="highlight"><pre><span></span><code>Host → CHCK~
 Device → {&quot;deviceModel&quot;:&quot;Bridge6&quot;,&quot;firmwareVersion&quot;:&quot;2.1.0&quot;,&quot;hardwareVersion&quot;:&quot;1.1.3&quot;,&quot;deviceName&quot;:&quot;Bridge 6&quot;,&quot;uId&quot;:5,&quot;profileId&quot;:0}~
-</code></pre>
+</code></pre></div>
 <h3 id="example-2-read-global-settings">Example 2: Read Global Settings</h3>
-<pre><code>Host → DREQ~
+<div class="highlight"><pre><span></span><code>Host → DREQ~
 Device → ok~
 Host → globalSettings~
 Device → {&quot;currentBank&quot;:0,&quot;midiChannel&quot;:0,&quot;ledBrightness&quot;:66,&quot;uiMode&quot;:&quot;extended&quot;,&quot;holdTime&quot;:1000,&quot;deviceName&quot;:&quot;Bridge 6&quot;,&quot;profileId&quot;:0,...}~
-</code></pre>
+</code></pre></div>
 <h3 id="example-3-read-bank-5-settings">Example 3: Read Bank 5 Settings</h3>
-<pre><code>Host → DREQ~
+<div class="highlight"><pre><span></span><code>Host → DREQ~
 Device → ok~
 Host → bankSettings,5~
 Device → {&quot;bankName&quot;:&quot;New Bank&quot;,&quot;bankId&quot;:1820074671,&quot;midiClocks&quot;:[{&quot;tempo&quot;:0},{&quot;tempo&quot;:0}],&quot;bankMessages&quot;:{&quot;numMessages&quot;:0,&quot;messages&quot;:[]},...}~
-</code></pre>
+</code></pre></div>
 <h3 id="example-4-update-global-settings">Example 4: Update Global Settings</h3>
-<pre><code>Host → DTXR~
+<div class="highlight"><pre><span></span><code>Host → DTXR~
 Device → ok~
 Host → globalSettings~
 Device → ok~
 Host → {&quot;deviceName&quot;:&quot;Studio Controller&quot;,&quot;midiChannel&quot;:10,&quot;ledBrightness&quot;:75,&quot;holdTime&quot;:1000}~
 Device → ok~
-</code></pre>
+</code></pre></div>
 <p><em>Note: While this example shows only a few fields being updated, best practice is to send the complete global settings object you retrieved via DREQ, with your modifications applied.</em></p>
 <h3 id="example-5-update-bank-name-simple-device">Example 5: Update Bank Name (Simple Device)</h3>
-<pre><code>Host → DTXR~
+<div class="highlight"><pre><span></span><code>Host → DTXR~
 Device → ok~
 Host → bankSettings,0~
 Device → ok~
 Host → {&quot;bankId&quot;:1820074671,&quot;bankName&quot;:&quot;Intro Song&quot;,&quot;midiClocks&quot;:[...],...}~
 Device → ok~
-</code></pre>
+</code></pre></div>
 <p><em>Note: For simple devices, send the complete bank configuration with your changes. For Bridge OS devices, see Example 8 for the recommended footswitch transfer strategy.</em></p>
 <h3 id="example-6-navigate-to-bank-10">Example 6: Navigate to Bank 10</h3>
-<pre><code>Host → CTRL~
+<div class="highlight"><pre><span></span><code>Host → CTRL~
 Device → ok~
 Host → {&quot;command&quot;:[{&quot;goToBank&quot;:10}]}~
 Device → ok~
-</code></pre>
+</code></pre></div>
 <h3 id="example-7-save-all-banks-and-restart">Example 7: Save All Banks and Restart</h3>
-<pre><code>Host → CTRL~
+<div class="highlight"><pre><span></span><code>Host → CTRL~
 Device → ok~
 Host → {&quot;command&quot;:[&quot;savePresets&quot;,&quot;restart&quot;]}~
 Device → ok~
-</code></pre>
+</code></pre></div>
 <p><em>Note: The <code>savePresets</code> command is device-dependent. Bridge OS controllers (Bridge4, Bridge6, Bridge8, etc.) automatically save bank data and may not implement this command. Simpler devices like the Scribble require this command to persist changes to flash memory. If your device returns an error or doesn't recognize <code>savePresets</code>, it likely saves automatically.</em></p>
 <h3 id="example-8-update-footswitch-on-bridge-os-device">Example 8: Update Footswitch on Bridge OS Device</h3>
 <p><strong>Step 1: Send non-footswitch bank settings</strong></p>
-<pre><code>Host → DTXR~
+<div class="highlight"><pre><span></span><code>Host → DTXR~
 Device → ok~
 Host → bankSettings,0~
 Device → ok~
 Host → {&quot;bankId&quot;:1820074671,&quot;bankName&quot;:&quot;Lead Patch&quot;,&quot;midiClocks&quot;:[{&quot;tempo&quot;:120},{&quot;tempo&quot;:0}],&quot;bankMessages&quot;:{&quot;numMessages&quot;:0,&quot;messages&quot;:[]},...}~
 Device → ok~
-</code></pre>
+</code></pre></div>
 <p><strong>Step 2: Send footswitch 0</strong></p>
-<pre><code>Host → DTXR~
+<div class="highlight"><pre><span></span><code>Host → DTXR~
 Device → ok~
 Host → bankSettings,0~
 Device → ok~
 Host → {&quot;footswitches&quot;:[{&quot;name&quot;:&quot;FS 1&quot;,&quot;primaryMode&quot;:&quot;toggle&quot;,&quot;primaryColor&quot;:16711680,&quot;toggleOnMessages&quot;:{...},&quot;toggleOffMessages&quot;:{...},...}]}~
 Device → ok~
-</code></pre>
+</code></pre></div>
 <p><strong>Step 3: Send footswitch 1</strong></p>
-<pre><code>Host → DTXR~
+<div class="highlight"><pre><span></span><code>Host → DTXR~
 Device → ok~
 Host → bankSettings,0~
 Device → ok~
 Host → {&quot;footswitches&quot;:[{},{&quot;name&quot;:&quot;FS 2&quot;,&quot;primaryMode&quot;:&quot;press&quot;,&quot;primaryColor&quot;:65280,&quot;pressMessages&quot;:{...},...}]}~
 Device → ok~
-</code></pre>
+</code></pre></div>
 <p><em>Note: Notice how footswitch 1 includes an empty object <code>{}</code> before its data to indicate the correct array position. This pattern continues for each subsequent footswitch.</em></p>
 <h2 id="best-practices">Best Practices</h2>
 <h3 id="communication-timing">Communication Timing</h3>
@@ -2529,6 +2529,10 @@ Device → ok~
         <script src="../js/timeago.min.js"></script>
       
         <script src="../js/timeago_mkdocs_material.js"></script>
+      
+        <script src="../assets/renderjson.js"></script>
+      
+        <script src="../assets/json-viewer.js"></script>
       
     
   </body>

@@ -763,9 +763,9 @@
 <p>Each device implements the same core protocol with device-specific configuration fields and capabilities.</p>
 <h2 id="quick-example">Quick Example</h2>
 <p>Here's a simple interaction querying device information:</p>
-<pre><code>Host → CHCK~
+<div class="highlight"><pre><span></span><code>Host → CHCK~
 Device → {&quot;deviceModel&quot;:&quot;Bridge6&quot;,&quot;firmwareVersion&quot;:&quot;2.1.0&quot;,...}~
-</code></pre>
+</code></pre></div>
 <p>The protocol uses a multi-step approach where each command is sent separately and the device responds after each step.</p>
 <h2 id="use-cases">Use Cases</h2>
 <ul>
@@ -951,6 +951,10 @@ Device → {&quot;deviceModel&quot;:&quot;Bridge6&quot;,&quot;firmwareVersion&qu
         <script src="js/timeago.min.js"></script>
       
         <script src="js/timeago_mkdocs_material.js"></script>
+      
+        <script src="assets/renderjson.js"></script>
+      
+        <script src="assets/json-viewer.js"></script>
       
     
   </body>
