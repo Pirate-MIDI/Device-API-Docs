@@ -120,12 +120,19 @@ jobs:
 
           echo "All validations passed"
 
-      - name: Build check
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install Python deps
         run: |
-          python3 -m pip install --upgrade pip
+          python -m pip install --upgrade pip
           pip install -r requirements.txt
-          mkdocs build --strict
-        continue-on-error: false
+
+      - name: Build check
+        run: mkdocs build --strict
 
       - name: Commit and push
         run: |
