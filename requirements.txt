@@ -7,3 +7,4 @@ mkdocs-material[imaging]
 # Plugins
 mkdocs-git-revision-date-localized-plugin>=1.2.0
 mkdocs-awesome-pages-plugin>=2.9.0
+mkdocs-macros-plugin>=1.0.0

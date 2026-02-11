@@ -4,14 +4,14 @@ Device-specific documentation for each Pirate MIDI product, including configurat
 
 ## Bridge
 
-- [**Bridge4**](bridge/bridge4/) - 4-footswitch Bridge OS controller
-- [**Bridge6**](bridge/bridge6/) - 6-footswitch Bridge OS controller
 - [**Aero**](bridge/aero/) - Compact Bridge OS controller
+- **Bridge4** - 4-footswitch Bridge OS controller
+- **Bridge6** - 6-footswitch Bridge OS controller
 
 ## Click
 
-- [**Click**](click/click/) - Compact auxiliary MIDI controller
+- **Click** - Compact auxiliary MIDI controller
 
 ## Scribble
 
-- [**Scribble**](scribble/scribble/) - Customizable display-based MIDI controller
+- **Scribble** - Customizable display-based MIDI controller

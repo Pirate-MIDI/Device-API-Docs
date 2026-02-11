@@ -7,7 +7,7 @@ A Raspberry Pi "firmware station" analyzes Pirate MIDI device firmware on each r
 ## Chosen Approach: Repository Dispatch + GitHub Actions
 
 ### Flow
-1. **Pi analyzes firmware** → generates docs artifacts (markdown + JSON templates)
+1. **Pi analyzes firmware** → generates docs artifacts (index.md + JSON templates)
 2. **Pi pushes artifacts** as a release artifact to the firmware analysis repo
 3. **Pi fires `repository_dispatch`** to this docs repo with metadata (device, firmware version, artifact URL)
 4. **GitHub Actions workflow in this repo** downloads artifacts, places files, commits, and pushes
@@ -39,59 +39,74 @@ curl -X POST \
 
 ```
 docs/devices/
-├── index.md                              # Lists all models directly (no family-level pages)
+├── index.md                              # Lists all device models with links
 ├── bridge/
+│   ├── aero/
+│   │   ├── .pages                        # order: desc (latest firmware first in sidebar)
+│   │   └── {major}.{minor}.x/            # e.g., 1.2.x, 2.0.x
+│   │       ├── index.md                  # Firmware version page (properties, schema, templates)
+│   │       ├── factory-default.json      # Template: complete factory config
+│   │       └── blank.json               # Template: blank starting config
 │   ├── bridge4/
-│   │   ├── index.md                      # Firmware version listing table (latest first)
-│   │   ├── x.x.x.md                     # Template: firmware version page
-│   │   └── templates/x.x.x/
-│   │       ├── globalSettings.json
-│   │       └── bankSettings.json
-│   ├── bridge6/
-│   │   ├── index.md
-│   │   ├── x.x.x.md
-│   │   └── templates/x.x.x/
-│   │       ├── globalSettings.json
-│   │       └── bankSettings.json
-│   └── aero/
-│       ├── index.md
-│       ├── x.x.x.md
-│       └── templates/x.x.x/
-│           ├── globalSettings.json
-│           └── bankSettings.json
+│   │   ├── .pages
+│   │   └── (same pattern)
+│   └── bridge6/
+│       ├── .pages
+│       └── (same pattern)
 ├── click/
 │   └── click/
-│       ├── index.md
-│       ├── x.x.x.md
-│       └── templates/x.x.x/
-│           ├── globalSettings.json
-│           └── bankSettings.json
+│       ├── .pages
+│       └── (same pattern)
 └── scribble/
     └── scribble/
-        ├── index.md
-        ├── x.x.x.md
-        └── templates/x.x.x/
-            ├── globalSettings.json
-            └── bankSettings.json
+        ├── .pages
+        └── (same pattern)
 ```
 
-## Firmware Version Page Structure (x.x.x.md)
+### Key Design Decisions
 
-Single page per firmware version with three anchor-linked sections:
+- **No per-device index page** — Devices show only their firmware versions in the sidebar (no separate landing page that clutters navigation)
+- **Firmware versions as directories** — Each version is a directory with `index.md` so templates are nested underneath, not in a separate tree
+- **Version format: `{major}.{minor}.x`** — Only major/minor increments change the Device API model, so patch versions share the same docs (e.g., `1.0.x` covers v1.0.0, v1.0.1, etc.)
+- **Templates are just `.json` files** — Any `.json` file in a firmware version directory is automatically rendered as a template on the page via the `render_templates()` macro (defined in `main.py`)
+- **Navigation sorted latest-first** — `.pages` files with `order: desc` in each device directory ensure newest firmware versions appear at the top of the sidebar
 
-1. **Device Properties** — Short description + JSON (CHCK response data)
-2. **Device Schema** — Short description + JSON (globalSettings/bankSettings schema)
-3. **Basic Templates** — Short description + links to template .json files
+## Firmware Version Page Structure (`index.md`)
 
-## Model Index Page (index.md)
+Single page per firmware version with three sections:
 
-Table listing firmware versions sorted latest-first:
+1. **Device Properties** — JSON object from the `CHCK` command response describing hardware capabilities and firmware structure
+2. **Device Schema** — JSON schema defining the complete structure of `globalSettings` and `bankSettings` including value types, constraints, and enums
+3. **Templates** — Auto-rendered by `{{ render_templates() }}` macro. Discovers all `.json` files in the directory and renders each with a collapsible JSON viewer and download button. Template display name is derived from filename (e.g., `factory-default.json` → "Factory Default")
 
-| Version | Release Date | Links |
-|---------|-------------|-------|
-| [2.1.0](2.1.0.md) | 2025-01-15 | [Templates](templates/2.1.0/) |
+## Artifact Format
 
-The dispatch workflow needs to prepend new rows to this table.
+The tar.gz/zip produced by the Pi for each firmware version should contain:
+
+```
+{major}.{minor}.x/
+├── index.md                  # Firmware version page with populated Device Properties and Schema
+├── factory-default.json      # Full factory default configuration
+├── blank.json                # Blank/empty configuration
+└── (any additional .json)    # Additional templates are auto-discovered
+```
+
+The dispatch workflow places this directory at:
+`docs/devices/{device-path}/{major}.{minor}.x/`
+
+No need to update any other files — the `render_templates()` macro handles template display, and `awesome-pages` handles sidebar ordering.
+
+## Device-to-Path Mapping
+
+The workflow maps device identifiers from `client_payload.device` to directory paths:
+
+| Device ID  | Directory Path                      |
+|------------|-------------------------------------|
+| `bridge4`  | `docs/devices/bridge/bridge4/`      |
+| `bridge6`  | `docs/devices/bridge/bridge6/`      |
+| `aero`     | `docs/devices/bridge/aero/`         |
+| `click`    | `docs/devices/click/click/`         |
+| `scribble` | `docs/devices/scribble/scribble/`   |
 
 ## Next Steps (TODO)
 
@@ -100,43 +115,30 @@ The dispatch workflow needs to prepend new rows to this table.
 - Trigger: `repository_dispatch` with type `docs-update`
 - Should:
   - Download artifacts from `client_payload.docs_url`
-  - Map `client_payload.device` to the correct directory path (e.g., `bridge6` → `docs/devices/bridge/bridge6/`)
-  - Place the firmware version .md file and template .json files
-  - Prepend a row to the model's index.md firmware version table
-  - Commit and push
+  - Extract `{major}.{minor}.x/` directory from the artifact
+  - Map `client_payload.device` to the correct directory path
+  - Place the firmware version directory (index.md + JSON files)
+  - Commit and push (the deploy workflow handles the rest)
 
 ### 2. Add Automated Validation Checks
 - The dispatch workflow should validate artifacts before committing:
-  - Markdown files are well-formed
   - JSON files are valid JSON
-  - Required sections exist in firmware version .md (Device Properties, Device Schema, Basic Templates)
-  - Template .json files are referenced correctly
+  - Required sections exist in firmware version index.md (Device Properties, Device Schema, Templates)
+  - The `{{ render_templates() }}` macro call is present in the markdown
   - `mkdocs build --strict` passes after placing files
 - This prevents broken artifacts from being auto-deployed
 
-### 3. Define Artifact Format
-- Decide the exact structure of the tar.gz/zip the Pi produces
-- Should contain:
-  - `{version}.md` — The firmware version documentation page
-  - `templates/{version}/globalSettings.json`
-  - `templates/{version}/bankSettings.json`
-  - Possibly a manifest.json with metadata (device model, version, release date)
-
-### 4. Device-to-Path Mapping
-- The workflow needs to map device identifiers to directory paths:
-  - `bridge4` → `docs/devices/bridge/bridge4/`
-  - `bridge6` → `docs/devices/bridge/bridge6/`
-  - `aero` → `docs/devices/bridge/aero/`
-  - `click` → `docs/devices/click/click/`
-  - `scribble` → `docs/devices/scribble/scribble/`
-
-### 5. Pi-Side Implementation
-- Script to package artifacts in the expected format
-- Script to upload artifacts (GitHub release on firmware repo, or other hosting)
-- Script to fire the repository_dispatch event
+### 3. Pi-Side Implementation
+- Script to analyze firmware and generate:
+  - `index.md` with populated Device Properties and Device Schema sections
+  - Template `.json` files (factory-default.json, blank.json, and any additional templates)
+- Script to package artifacts in the expected directory format
+- Script to upload artifacts and fire the `repository_dispatch` event
 
 ## Alternatives Considered But Not Chosen
 
 - **GitHub Contents API**: Lightweight HTTP calls, no clone needed. Good for simple cases but multi-file atomic commits require multiple API calls (blobs → tree → commit → update ref).
 - **Shallow sparse clone**: `git clone --depth 1 --sparse` is lighter than full clone but still more overhead than pure API calls.
 - **Direct push from Pi**: Works but puts git logic on the Pi unnecessarily.
+- **Separate template pages**: Template viewer pages as standalone `.md` files caused unwanted sidebar expansion under firmware versions. Embedding via the `render_templates()` macro keeps templates on the firmware page without extra nav entries.
+- **Per-device index.md with version table**: Added clutter to the sidebar. Removing it lets the sidebar show firmware versions directly under each device.

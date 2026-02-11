@@ -47,6 +47,7 @@ theme:
 plugins:
   - search
   - awesome-pages
+  - macros
   - social:
       cards_layout_options:
         background_color: "#5b8dca"   # your brand blue
