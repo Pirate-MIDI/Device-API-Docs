@@ -14,7 +14,8 @@
       "Bash(pip show:*)",
       "Bash(findstr:*)",
       "Bash(python -m mkdocs:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(git checkout:*)"
     ]
   }
 }

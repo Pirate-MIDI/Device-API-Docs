@@ -42,3 +42,27 @@ jobs:
 
       - name: Deploy
         run: mkdocs gh-deploy --force
+
+      - name: Notify success
+        if: success()
+        run: |
+          curl -s \
+            -H "Title: Docs site deployed" \
+            -H "Priority: default" \
+            -H "Tags: rocket" \
+            -d "Site deployed successfully to developer.piratemidi.com
+          Commit: ${{ github.event.head_commit.message }}
+          Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+            "ntfy.sh/${{ secrets.NTFY_TOPIC }}"
+
+      - name: Notify failure
+        if: failure()
+        run: |
+          curl -s \
+            -H "Title: Docs site deploy failed" \
+            -H "Priority: high" \
+            -H "Tags: x" \
+            -d "Site deployment to GitHub Pages failed.
+          Commit: ${{ github.event.head_commit.message }}
+          Check the run for details: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+            "ntfy.sh/${{ secrets.NTFY_TOPIC }}"

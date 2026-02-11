@@ -152,3 +152,30 @@ jobs:
           Firmware version: ${{ github.event.client_payload.firmware_version }}
           Device: $DEVICE"
           git push
+
+      - name: Notify success
+        if: success()
+        run: |
+          DEVICE="${{ github.event.client_payload.device }}"
+          VERSION="${{ steps.version.outputs.dir }}"
+          FW_VERSION="${{ github.event.client_payload.firmware_version }}"
+          curl -s \
+            -H "Title: Docs updated: ${DEVICE} ${VERSION}" \
+            -H "Priority: default" \
+            -H "Tags: white_check_mark" \
+            -d "Device API docs for ${DEVICE} firmware ${FW_VERSION} deployed successfully.
+          Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+            "ntfy.sh/${{ secrets.NTFY_TOPIC }}"
+
+      - name: Notify failure
+        if: failure()
+        run: |
+          DEVICE="${{ github.event.client_payload.device }}"
+          FW_VERSION="${{ github.event.client_payload.firmware_version }}"
+          curl -s \
+            -H "Title: Docs update failed: ${DEVICE:-unknown}" \
+            -H "Priority: high" \
+            -H "Tags: x" \
+            -d "Failed to update Device API docs for ${DEVICE:-unknown device} firmware ${FW_VERSION:-unknown version}.
+          Check the run for details: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+            "ntfy.sh/${{ secrets.NTFY_TOPIC }}"
