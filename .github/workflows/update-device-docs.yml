@@ -1,0 +1,136 @@
+name: Update Device Docs
+
+on:
+  repository_dispatch:
+    types: [docs-update]
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate payload
+        run: |
+          if [ -z "${{ github.event.client_payload.device }}" ]; then
+            echo "::error::Missing client_payload.device"
+            exit 1
+          fi
+          if [ -z "${{ github.event.client_payload.firmware_version }}" ]; then
+            echo "::error::Missing client_payload.firmware_version"
+            exit 1
+          fi
+          if [ -z "${{ github.event.client_payload.docs_url }}" ]; then
+            echo "::error::Missing client_payload.docs_url"
+            exit 1
+          fi
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Resolve device path
+        id: device
+        run: |
+          DEVICE="${{ github.event.client_payload.device }}"
+          case "$DEVICE" in
+            bridge4)  DEVICE_PATH="docs/devices/bridge/bridge4" ;;
+            bridge6)  DEVICE_PATH="docs/devices/bridge/bridge6" ;;
+            aero)     DEVICE_PATH="docs/devices/bridge/aero" ;;
+            click)    DEVICE_PATH="docs/devices/click/click" ;;
+            scribble) DEVICE_PATH="docs/devices/scribble/scribble" ;;
+            *)
+              echo "::error::Unknown device: $DEVICE"
+              exit 1
+              ;;
+          esac
+          echo "path=$DEVICE_PATH" >> "$GITHUB_OUTPUT"
+          echo "Resolved device '$DEVICE' to path '$DEVICE_PATH'"
+
+      - name: Parse firmware version
+        id: version
+        run: |
+          FW_VERSION="${{ github.event.client_payload.firmware_version }}"
+          # Extract major.minor from version string (e.g., "2.1.0" -> "2.1.x")
+          VERSION_DIR=$(echo "$FW_VERSION" | sed -E 's/^([0-9]+\.[0-9]+)\..*/\1.x/')
+          echo "dir=$VERSION_DIR" >> "$GITHUB_OUTPUT"
+          echo "Firmware $FW_VERSION -> directory $VERSION_DIR"
+
+      - name: Download artifact
+        run: |
+          curl -fSL "${{ github.event.client_payload.docs_url }}" -o artifact.tar.gz
+          echo "Downloaded artifact ($(stat -c%s artifact.tar.gz) bytes)"
+
+      - name: Extract and place files
+        run: |
+          DEST="${{ steps.device.outputs.path }}/${{ steps.version.outputs.dir }}"
+          mkdir -p "$DEST"
+          tar -xzf artifact.tar.gz -C "$DEST" --strip-components=1
+          echo "Extracted to $DEST"
+          ls -la "$DEST"
+
+      - name: Ensure .pages file exists
+        run: |
+          PAGES_FILE="${{ steps.device.outputs.path }}/.pages"
+          if [ ! -f "$PAGES_FILE" ]; then
+            echo "order: desc" > "$PAGES_FILE"
+            echo "Created $PAGES_FILE"
+          fi
+
+      - name: Validate artifacts
+        run: |
+          DEST="${{ steps.device.outputs.path }}/${{ steps.version.outputs.dir }}"
+
+          # index.md must exist
+          if [ ! -f "$DEST/index.md" ]; then
+            echo "::error::Missing index.md in artifact"
+            exit 1
+          fi
+
+          # index.md must contain required sections
+          for section in "## Device Properties" "## Device Schema" "## Templates"; do
+            if ! grep -q "$section" "$DEST/index.md"; then
+              echo "::error::Missing section '$section' in index.md"
+              exit 1
+            fi
+          done
+
+          # render_templates() macro must be present
+          if ! grep -q 'render_templates()' "$DEST/index.md"; then
+            echo "::error::Missing render_templates() macro call in index.md"
+            exit 1
+          fi
+
+          # All .json files must be valid JSON
+          for f in "$DEST"/*.json; do
+            [ -f "$f" ] || continue
+            if ! python3 -c "import json; json.load(open('$f'))"; then
+              echo "::error::Invalid JSON: $f"
+              exit 1
+            fi
+          done
+
+          echo "All validations passed"
+
+      - name: Build check
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install -r requirements.txt
+          mkdocs build --strict
+        continue-on-error: false
+
+      - name: Commit and push
+        run: |
+          DEVICE="${{ github.event.client_payload.device }}"
+          VERSION="${{ steps.version.outputs.dir }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "${{ steps.device.outputs.path }}/"
+          git commit -m "docs($DEVICE): update $VERSION device API docs
+
+          Automated update from firmware station dispatch.
+          Firmware version: ${{ github.event.client_payload.firmware_version }}
+          Device: $DEVICE"
+          git push
