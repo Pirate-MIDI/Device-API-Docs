@@ -59,8 +59,14 @@ jobs:
           echo "Firmware $FW_VERSION -> directory $VERSION_DIR"
 
       - name: Download artifact
+        env:
+          GH_TOKEN: ${{ secrets.BUILD_STATION_TOKEN }}
         run: |
-          curl -fSL "${{ github.event.client_payload.docs_url }}" -o artifact.tar.gz
+          curl -fSL \
+            -H "Authorization: token $GH_TOKEN" \
+            -H "Accept: application/octet-stream" \
+            "${{ github.event.client_payload.docs_url }}" \
+            -o artifact.tar.gz
           echo "Downloaded artifact ($(stat -c%s artifact.tar.gz) bytes)"
 
       - name: Extract and place files
