@@ -62,11 +62,15 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.BUILD_STATION_TOKEN }}
         run: |
-          curl -fSL \
-            -H "Authorization: token $GH_TOKEN" \
-            -H "Accept: application/octet-stream" \
-            "${{ github.event.client_payload.docs_url }}" \
-            -o artifact.tar.gz
+          # Parse owner/repo, tag, and filename from the browser URL
+          # Format: https://github.com/{owner}/{repo}/releases/download/{tag}/{filename}
+          URL="${{ github.event.client_payload.docs_url }}"
+          SOURCE_REPO=$(echo "$URL" | sed -E 's|https://github.com/([^/]+/[^/]+)/releases/.*|\1|')
+          TAG=$(echo "$URL" | sed -E 's|.*/releases/download/([^/]+)/.*|\1|')
+          FILENAME=$(basename "$URL")
+
+          gh release download "$TAG" --repo "$SOURCE_REPO" --pattern "$FILENAME" --dir .
+          mv "$FILENAME" artifact.tar.gz
           echo "Downloaded artifact ($(stat -c%s artifact.tar.gz) bytes)"
 
       - name: Extract and place files
