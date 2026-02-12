@@ -9,6 +9,7 @@ theme:
   language: en
   favicon: assets/favicon.png
   logo: assets/logo-white.png
+  custom_dir: overrides
   name: material
   features:
     - content.action.edit

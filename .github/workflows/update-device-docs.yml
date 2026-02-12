@@ -161,7 +161,7 @@ jobs:
           FW_VERSION="${{ github.event.client_payload.firmware_version }}"
           curl -s \
             -H "Title: Docs updated: ${DEVICE} ${VERSION}" \
-            -H "Priority: default" \
+            -H "Priority: min" \
             -H "Tags: white_check_mark" \
             -d "Device API docs for ${DEVICE} firmware ${FW_VERSION} deployed successfully.
           Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
