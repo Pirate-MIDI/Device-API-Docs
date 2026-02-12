@@ -591,8 +591,7 @@ Device-specific schemas are documented in their respective sections.
 
 For detailed information about specific devices, including complete JSON schemas and configuration options, see:
 
-- todo
-- (Additional devices will be listed here)
+- [Device Documentation](../devices/index.md)
 
 ## Troubleshooting
 

@@ -26,11 +26,7 @@ The [Protocol Overview](Device-API/index.md) provides comprehensive documentatio
 
 ## Supported Devices
 
-The Device API is implemented across the Pirate MIDI product line:
-
-- **Simple Devices**: Scribble, CLiCK
-- **Bridge OS Devices**: Aero, Bridge4, Bridge6, Bridge8, FlexiHub
-
+The Device API is implemented for all devices which support our editor for configuration.
 Each device implements the same core protocol with device-specific configuration fields and capabilities.
 
 
@@ -55,7 +51,7 @@ The protocol uses a multi-step approach where each command is sent separately an
 ## Documentation Structure
 
 - **[Protocol Overview](Device-API/index.md)** - Complete protocol specification, commands, and examples
-- **Device-Specific References** - Detailed configuration schemas for each device model (coming soon)
+- **[Device-Specific References](devices/index.md)** - Detailed configuration schemas for each device model
 
 ## Need Help?
 
