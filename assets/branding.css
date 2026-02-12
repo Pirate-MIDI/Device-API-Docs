@@ -142,6 +142,23 @@
   border-color: var(--md-accent-fg-color);
 }
 
+/* ============================= */
+/* Announcement bar              */
+/* ============================= */
+
+.md-banner {
+  background: var(--md-default-fg-color--lightest);
+}
+
+.md-banner a {
+  color: var(--md-default-fg-color--light);
+  font-size: .7rem;
+}
+
+.md-banner a:hover {
+  color: var(--md-accent-fg-color);
+}
+
 .grid.cards.onecol {
   grid-template-columns: 1fr !important;
 }
