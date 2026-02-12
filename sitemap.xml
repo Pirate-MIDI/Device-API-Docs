@@ -24,4 +24,8 @@
          <loc>https://developer.piratemidi.com/devices/bridge/bridge6/2.1.x/</loc>
          <lastmod>2026-02-12</lastmod>
     </url>
+    <url>
+         <loc>https://developer.piratemidi.com/devices/scribble/scribble/1.0.x/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
 </urlset>

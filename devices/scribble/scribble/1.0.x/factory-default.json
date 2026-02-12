@@ -1,0 +1,5596 @@
+{
+    "deviceSettings": {
+        "deviceModel": "Scribble",
+        "firmwareVersion": "1.0.1",
+        "hardwareVersion": "1.x.0",
+        "deviceName": "Scribble",
+        "uId": 0,
+        "profileId": 0
+    },
+    "globalSettings": {
+        "deviceName": "Scribble",
+        "currentBank": 0,
+        "lightMode": "dark",
+        "mainColour": 15199215,
+        "textColour": 0,
+        "displayBrightness": 100,
+        "midiChannel": 0,
+        "globalBpm": 120,
+        "midiOutPortMode": "midiOutA",
+        "clockMode": "external",
+        "clockDisplayType": "bpm",
+        "pcBankOutputs": {
+            "usbd": 1,
+            "ble": 1,
+            "midi1": 1
+        },
+        "usbdThruHandles": {
+            "usbd": true,
+            "ble": true,
+            "midi1": true
+        },
+        "bleThruHandles": {
+            "usbd": true,
+            "ble": true,
+            "midi1": true
+        },
+        "midi1ThruHandles": {
+            "usbd": true,
+            "ble": true,
+            "midi1": true
+        },
+        "midiClockOutHandles": {
+            "usbd": false,
+            "ble": false,
+            "midi1": false
+        },
+        "switches": [
+            {
+                "mode": "pressPresetDown",
+                "pressMessages": {
+                    "numMessages": 0,
+                    "messages": []
+                },
+                "holdMessages": {
+                    "numMessages": 0,
+                    "messages": []
+                }
+            },
+            {
+                "mode": "pressPresetUp",
+                "pressMessages": {
+                    "numMessages": 0,
+                    "messages": []
+                },
+                "holdMessages": {
+                    "numMessages": 0,
+                    "messages": []
+                }
+            }
+        ],
+        "customMessages": {
+            "numMessages": 0,
+            "messages": []
+        },
+        "presetUpCC": 1,
+        "presetDownCC": 2,
+        "goToPresetCC": 3,
+        "globalCustomMessagesCC": 17,
+        "presetCustomMessagesCC": 16,
+        "wirelessType": "ble",
+        "bleMode": "server",
+        "useStaticIp": false,
+        "staticIp": "0.0.0.0",
+        "gatewayIp": "0.0.0.0",
+        "mainTextResize": false,
+        "midiValueDisplay": "barPercent",
+        "midiValueDisplayCC": 7,
+        "kemperPlayerMode": false
+    },
+    "bankSettings": [
+        {
+            "bankId": 0,
+            "bankName": "Preset 1",
+            "secondaryText": "Second. 1",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 2",
+            "secondaryText": "Second. 2",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 3",
+            "secondaryText": "Second. 3",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 4",
+            "secondaryText": "Second. 4",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 5",
+            "secondaryText": "Second. 5",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 6",
+            "secondaryText": "Second. 6",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 7",
+            "secondaryText": "Second. 7",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 8",
+            "secondaryText": "Second. 8",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 9",
+            "secondaryText": "Second. 9",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 10",
+            "secondaryText": "Second. 10",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 11",
+            "secondaryText": "Second. 11",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 12",
+            "secondaryText": "Second. 12",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 13",
+            "secondaryText": "Second. 13",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 14",
+            "secondaryText": "Second. 14",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 15",
+            "secondaryText": "Second. 15",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 16",
+            "secondaryText": "Second. 16",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 17",
+            "secondaryText": "Second. 17",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 18",
+            "secondaryText": "Second. 18",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 19",
+            "secondaryText": "Second. 19",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 20",
+            "secondaryText": "Second. 20",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 21",
+            "secondaryText": "Second. 21",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 22",
+            "secondaryText": "Second. 22",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 23",
+            "secondaryText": "Second. 23",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 24",
+            "secondaryText": "Second. 24",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 25",
+            "secondaryText": "Second. 25",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 26",
+            "secondaryText": "Second. 26",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 27",
+            "secondaryText": "Second. 27",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 28",
+            "secondaryText": "Second. 28",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 29",
+            "secondaryText": "Second. 29",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 30",
+            "secondaryText": "Second. 30",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 31",
+            "secondaryText": "Second. 31",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 32",
+            "secondaryText": "Second. 32",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 33",
+            "secondaryText": "Second. 33",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 34",
+            "secondaryText": "Second. 34",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 35",
+            "secondaryText": "Second. 35",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 36",
+            "secondaryText": "Second. 36",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 37",
+            "secondaryText": "Second. 37",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 38",
+            "secondaryText": "Second. 38",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 39",
+            "secondaryText": "Second. 39",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 40",
+            "secondaryText": "Second. 40",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 41",
+            "secondaryText": "Second. 41",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 42",
+            "secondaryText": "Second. 42",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 43",
+            "secondaryText": "Second. 43",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 44",
+            "secondaryText": "Second. 44",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 45",
+            "secondaryText": "Second. 45",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 46",
+            "secondaryText": "Second. 46",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 47",
+            "secondaryText": "Second. 47",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 48",
+            "secondaryText": "Second. 48",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 49",
+            "secondaryText": "Second. 49",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 50",
+            "secondaryText": "Second. 50",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 51",
+            "secondaryText": "Second. 51",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 52",
+            "secondaryText": "Second. 52",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 53",
+            "secondaryText": "Second. 53",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 54",
+            "secondaryText": "Second. 54",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 55",
+            "secondaryText": "Second. 55",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 56",
+            "secondaryText": "Second. 56",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 57",
+            "secondaryText": "Second. 57",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 58",
+            "secondaryText": "Second. 58",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 59",
+            "secondaryText": "Second. 59",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 60",
+            "secondaryText": "Second. 60",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 61",
+            "secondaryText": "Second. 61",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 62",
+            "secondaryText": "Second. 62",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 63",
+            "secondaryText": "Second. 63",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 64",
+            "secondaryText": "Second. 64",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 65",
+            "secondaryText": "Second. 65",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 66",
+            "secondaryText": "Second. 66",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 67",
+            "secondaryText": "Second. 67",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 68",
+            "secondaryText": "Second. 68",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 69",
+            "secondaryText": "Second. 69",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 70",
+            "secondaryText": "Second. 70",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 71",
+            "secondaryText": "Second. 71",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 72",
+            "secondaryText": "Second. 72",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 73",
+            "secondaryText": "Second. 73",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 74",
+            "secondaryText": "Second. 74",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 75",
+            "secondaryText": "Second. 75",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 76",
+            "secondaryText": "Second. 76",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 77",
+            "secondaryText": "Second. 77",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 78",
+            "secondaryText": "Second. 78",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 79",
+            "secondaryText": "Second. 79",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 80",
+            "secondaryText": "Second. 80",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 81",
+            "secondaryText": "Second. 81",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 82",
+            "secondaryText": "Second. 82",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 83",
+            "secondaryText": "Second. 83",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 84",
+            "secondaryText": "Second. 84",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 85",
+            "secondaryText": "Second. 85",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 86",
+            "secondaryText": "Second. 86",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 87",
+            "secondaryText": "Second. 87",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 88",
+            "secondaryText": "Second. 88",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 89",
+            "secondaryText": "Second. 89",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 90",
+            "secondaryText": "Second. 90",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 91",
+            "secondaryText": "Second. 91",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 92",
+            "secondaryText": "Second. 92",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 93",
+            "secondaryText": "Second. 93",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 94",
+            "secondaryText": "Second. 94",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 95",
+            "secondaryText": "Second. 95",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 96",
+            "secondaryText": "Second. 96",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 97",
+            "secondaryText": "Second. 97",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 98",
+            "secondaryText": "Second. 98",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 99",
+            "secondaryText": "Second. 99",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 100",
+            "secondaryText": "Second. 100",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 101",
+            "secondaryText": "Second. 101",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 102",
+            "secondaryText": "Second. 102",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 103",
+            "secondaryText": "Second. 103",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 104",
+            "secondaryText": "Second. 104",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 105",
+            "secondaryText": "Second. 105",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 106",
+            "secondaryText": "Second. 106",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 107",
+            "secondaryText": "Second. 107",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 108",
+            "secondaryText": "Second. 108",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 109",
+            "secondaryText": "Second. 109",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 110",
+            "secondaryText": "Second. 110",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 111",
+            "secondaryText": "Second. 111",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 112",
+            "secondaryText": "Second. 112",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 113",
+            "secondaryText": "Second. 113",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 114",
+            "secondaryText": "Second. 114",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 115",
+            "secondaryText": "Second. 115",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 116",
+            "secondaryText": "Second. 116",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 117",
+            "secondaryText": "Second. 117",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 118",
+            "secondaryText": "Second. 118",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 119",
+            "secondaryText": "Second. 119",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 120",
+            "secondaryText": "Second. 120",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 121",
+            "secondaryText": "Second. 121",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 122",
+            "secondaryText": "Second. 122",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 123",
+            "secondaryText": "Second. 123",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 124",
+            "secondaryText": "Second. 124",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 125",
+            "secondaryText": "Second. 125",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 126",
+            "secondaryText": "Second. 126",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 127",
+            "secondaryText": "Second. 127",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        },
+        {
+            "bankId": 0,
+            "bankName": "Preset 128",
+            "secondaryText": "Second. 128",
+            "colourOverride": false,
+            "colour": 0,
+            "textColourOverride": false,
+            "textColour": 0,
+            "bpm": 120,
+            "switches": [
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                },
+                {
+                    "pressMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    },
+                    "holdMessages": {
+                        "numMessages": 0,
+                        "messages": []
+                    }
+                }
+            ],
+            "customMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "presetMessages": {
+                "numMessages": 0,
+                "messages": []
+            },
+            "midiValueDisplayOverride": false,
+            "midiValueDisplay": "none",
+            "midiValueDisplayCC": 0
+        }
+    ]
+}
