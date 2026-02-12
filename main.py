@@ -1,7 +1,39 @@
 import os
+import re
 
 
 def define_env(env):
+    @env.macro
+    def latest_firmware(device_path):
+        """Return a relative link to the latest firmware version for a device.
+
+        Args:
+            device_path: Path relative to docs/devices/, e.g. "bridge/aero"
+
+        Returns:
+            Relative path to the latest firmware version directory,
+            or the device directory itself if no versions exist.
+        """
+        docs_dir = env.conf["docs_dir"]
+        device_dir = os.path.join(docs_dir, "devices", device_path)
+
+        if not os.path.isdir(device_dir):
+            return f"{device_path}/"
+
+        version_pattern = re.compile(r"^(\d+)\.(\d+)\.x$")
+        versions = []
+        for entry in os.listdir(device_dir):
+            match = version_pattern.match(entry)
+            if match and os.path.isdir(os.path.join(device_dir, entry)):
+                versions.append((int(match.group(1)), int(match.group(2)), entry))
+
+        if not versions:
+            return f"{device_path}/"
+
+        versions.sort(reverse=True)
+        latest = versions[0][2]
+        return f"{device_path}/{latest}/"
+
     @env.macro
     def render_templates():
         """Discover all .json files in the current page's directory and render

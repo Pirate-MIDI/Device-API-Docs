@@ -15,7 +15,10 @@
       "Bash(findstr:*)",
       "Bash(python -m mkdocs:*)",
       "Bash(python:*)",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "Bash(ls:*)",
+      "Bash(venv/Scripts/activate)",
+      "Bash(mkdocs build:*)"
     ]
   }
 }

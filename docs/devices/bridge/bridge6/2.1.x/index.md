@@ -2651,6 +2651,6 @@ The device schema defines the complete structure of `globalSettings` and `bankSe
 
 ## Templates
 
-Starter templates for this device and firmware version. Load into the editor or transfer manually to your device using the `DTXR` command as described in the [Protocol Overview](../../../../device-api/index.md).
+Starter templates for this device and firmware version. Load into the editor or transfer manually to your device using the `DTXR` command as described in the [Protocol Overview](../../../../Device-API/index.md).
 
 {{ render_templates() }}

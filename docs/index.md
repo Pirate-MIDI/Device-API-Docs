@@ -15,14 +15,14 @@ The protocol works over USB CDC (serial) communication using simple ASCII comman
 
 ## Getting Started
 
-The [Protocol Overview](device-api/index.md) provides comprehensive documentation of:
+The [Protocol Overview](Device-API/index.md) provides comprehensive documentation of:
 
 - Command structure and communication flow
 - Data transfer strategies for different device types
 - Complete workflow examples
 - Best practices and troubleshooting
 
-**→ [Read the Protocol Overview](device-api/index.md)**
+**→ [Read the Protocol Overview](Device-API/index.md)**
 
 ## Supported Devices
 
@@ -54,15 +54,15 @@ The protocol uses a multi-step approach where each command is sent separately an
 
 ## Documentation Structure
 
-- **[Protocol Overview](device-api/index.md)** - Complete protocol specification, commands, and examples
+- **[Protocol Overview](Device-API/index.md)** - Complete protocol specification, commands, and examples
 - **Device-Specific References** - Detailed configuration schemas for each device model (coming soon)
 
 ## Need Help?
 
-- Check the [troubleshooting section](device-api/index.md#troubleshooting) in the overview
-- Review the [complete workflow examples](device-api/index.md#complete-workflow-examples)
+- Check the [troubleshooting section](Device-API/index.md#troubleshooting) in the overview
+- Review the [complete workflow examples](Device-API/index.md#complete-workflow-examples)
 - Visit the [Pirate MIDI support page](https://piratemidi.com/support)
 
 ---
 
-**Ready to dive in?** Start with the **[Protocol Overview](device-api/index.md)** to learn the complete Device API specification.
+**Ready to dive in?** Start with the **[Protocol Overview](Device-API/index.md)** to learn the complete Device API specification.
