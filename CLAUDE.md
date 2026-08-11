@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a MkDocs-based documentation site for the **Pirate MIDI Device API**, providing protocol documentation for interacting with Pirate MIDI hardware devices. The site is built with Material for MkDocs theme and includes custom branding with gradient headers, social card generation, and git-based revision dates.
+This is a Zensical-based documentation site for the **Pirate MIDI Device API**, providing protocol documentation for interacting with Pirate MIDI hardware devices. The site is built with Zensical (modern theme variant) and includes custom branding with gradient headers, social card generation, and git-based revision dates.
 
 **Live site:** https://developer.piratemidi.com
 
@@ -13,7 +13,7 @@ This is a MkDocs-based documentation site for the **Pirate MIDI Device API**, pr
 ### Local Development
 ```bash
 # Start local development server with live reload
-mkdocs serve
+zensical serve
 
 # The site will be available at http://127.0.0.1:8000
 ```
@@ -21,16 +21,12 @@ mkdocs serve
 ### Building
 ```bash
 # Build the site (outputs to site/ directory)
-mkdocs build
-
-# Build with strict mode (fails on warnings, used in CI)
-mkdocs build --strict
+zensical build
 ```
 
 ### Deployment
 ```bash
-# Manual deploy to GitHub Pages (normally handled by CI)
-mkdocs gh-deploy --force
+# Deployment is handled via GitHub Actions using zensical build & actions/deploy-pages
 ```
 
 ## Python Environment Setup
@@ -52,18 +48,15 @@ pip install -r requirements.txt
 ```
 
 ### Key Dependencies
-- `mkdocs` - Core documentation generator
-- `mkdocs-material[imaging]` - Material theme with social card generation
+- `zensical` - Modern static site generator
 - `mkdocs-git-revision-date-localized-plugin` - Automatic revision dates
 - `mkdocs-awesome-pages-plugin` - Directory-level navigation control (sort order, hiding)
 - `mkdocs-macros-plugin` - Jinja2 macros in markdown (powers template rendering)
 
-**Note:** The `mkdocs-material[imaging]` extra requires CairoSVG system libraries for social card generation. These are only needed in CI (Ubuntu) — local dev will show Cairo warnings which are safe to ignore.
-
 ## Architecture & Structure
 
 ### Configuration
-- **[mkdocs.yml](mkdocs.yml)** - Main site configuration including theme settings, plugins, markdown extensions, and social links. Navigation is auto-generated from directory structure (no explicit `nav:` key).
+- **[zensical.toml](zensical.toml)** - Main site configuration including modern theme settings, plugins, markdown extensions, and social links. Navigation is auto-generated from directory structure (no explicit `nav:` key).
 
 ### Macros
 - **[main.py](main.py)** - mkdocs-macros plugin entry point. Defines the `render_templates()` macro used in firmware version pages to auto-discover and display `.json` template files.
@@ -137,14 +130,14 @@ New firmware version directories added by the dispatch workflow automatically so
 
 ## Markdown Extensions
 
-The site uses these markdown extensions (configured in `mkdocs.yml`):
+The site uses these markdown extensions (configured in `zensical.toml`):
 - `admonition` + `pymdownx.details` — Collapsible admonition blocks (`???+ info "Title"`)
 - `pymdownx.superfences` — Fenced code blocks inside admonitions
 - `attr_list` — Attribute lists for styling (e.g., `{ .md-button }` on links)
 
 ## Theme Customization
 
-The site uses Material for MkDocs with extensive customization:
+The site uses Zensical with the modern theme (`variant = "modern"`) and custom branding:
 - **Gradient headers**: Blue gradient (light mode), pink gradient (dark mode)
 - **Navigation features**: Tabs, instant navigation, search with suggestions, code copy buttons
 - **Social cards**: Auto-generated with custom layout (blue background, white text)
@@ -157,7 +150,7 @@ Deployment is automatic on push to main:
 2. Sets up Python 3.11 environment
 3. Installs system dependencies for imaging/social cards (Cairo)
 4. Installs Python dependencies from `requirements.txt`
-5. Runs `mkdocs build --strict` (fails if configuration is invalid)
-6. Deploys to GitHub Pages via `mkdocs gh-deploy --force`
+5. Runs `zensical build`
+6. Deploys to GitHub Pages via `actions/upload-pages-artifact` & `actions/deploy-pages`
 
 The site is published to https://developer.piratemidi.com.

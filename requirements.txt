@@ -1,10 +1,8 @@
-# MkDocs core
-mkdocs>=1.5.0
-
-# Material theme with imaging and extras support
-mkdocs-material[imaging]
+# Zensical core static site generator
+zensical>=0.0.50
 
 # Plugins
 mkdocs-git-revision-date-localized-plugin>=1.2.0
 mkdocs-awesome-pages-plugin>=2.9.0
 mkdocs-macros-plugin>=1.0.0
+

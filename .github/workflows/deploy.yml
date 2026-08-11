@@ -1,20 +1,28 @@
-name: Deploy MkDocs to GitHub Pages
+name: Deploy Zensical to GitHub Pages
 
 on:
   push:
     branches: ["main"]
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -38,10 +46,16 @@ jobs:
           pip install -r requirements.txt
 
       - name: Build
-        run: mkdocs build --strict
+        run: zensical build
 
-      - name: Deploy
-        run: mkdocs gh-deploy --force
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 
       - name: Notify success
         if: success()
@@ -66,3 +80,4 @@ jobs:
           Commit: ${{ github.event.head_commit.message }}
           Check the run for details: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
             "ntfy.sh/${{ secrets.NTFY_TOPIC }}"
+

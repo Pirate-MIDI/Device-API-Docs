@@ -80,7 +80,7 @@ Triggers on `repository_dispatch` with type `docs-update`. The workflow:
    - Required sections are present (`## Device Properties`, `## Device Schema`, `## Templates`)
    - `render_templates()` macro call is present
    - All `.json` files are valid JSON
-8. **Build check** — runs `mkdocs build --strict` to catch any config issues
+8. **Build check** — runs `zensical build` to catch any config issues
 9. **Commits and pushes** — triggers the deploy workflow automatically
 
 ---
