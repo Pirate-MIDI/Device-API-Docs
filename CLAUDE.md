@@ -72,7 +72,7 @@ pip install -r requirements.txt
   - `logo-white.png` - Header logo
 
 ### Deployment
-- **[.github/workflows/deploy.yml](.github/workflows/deploy.yml)** - Automated deployment to GitHub Pages on push to gh-pages branch
+- **[.github/workflows/deploy.yml](.github/workflows/deploy.yml)** - Automated deployment to GitHub Pages on push to main branch
 
 ### Design Documents
 - **[DISPATCH_DESIGN.md](DISPATCH_DESIGN.md)** - Design doc for the firmware dispatch workflow that auto-generates device documentation from firmware analysis
@@ -145,7 +145,7 @@ The site uses Zensical with the modern theme (`variant = "modern"`) and custom b
 
 ## Deployment Process
 
-Deployment is automatic on push to gh-pages:
+Deployment is automatic on push to main:
 1. GitHub Actions workflow triggers
 2. Sets up Python 3.11 environment
 3. Installs system dependencies for imaging/social cards (Cairo)
