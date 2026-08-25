@@ -2,7 +2,6 @@
 site_name = "Pirate MIDI Device API Documentation"
 site_description = "Official documentation for the Device API protocol for interacting with Pirate MIDI hardware"
 site_url = "https://developer.piratemidi.com"
-edit_uri = ""
 
 extra_javascript = [
   "assets/renderjson.js",

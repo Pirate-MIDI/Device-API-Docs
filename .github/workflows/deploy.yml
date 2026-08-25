@@ -89,5 +89,3 @@ jobs:
           Commit: ${{ github.event.head_commit.message }}
           Check the run for details: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
             "ntfy.sh/${{ secrets.NTFY_TOPIC }}"
-
-
