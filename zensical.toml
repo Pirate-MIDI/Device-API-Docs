@@ -2,9 +2,6 @@
 site_name = "Pirate MIDI Device API Documentation"
 site_description = "Official documentation for the Device API protocol for interacting with Pirate MIDI hardware"
 site_url = "https://developer.piratemidi.com"
-repo_url = "https://github.com/Pirate-MIDI/Device-API-Docs"
-repo_name = "Device-API-Docs (GitHub)"
-edit_uri = "edit/main/docs/"
 
 extra_javascript = [
   "assets/renderjson.js",
@@ -24,7 +21,6 @@ logo = "assets/logo-white.png"
 custom_dir = "overrides"
 
 features = [
-  "content.action.edit",
   "header.autohide",
   "navigation.tabs",
   "navigation.instant",
